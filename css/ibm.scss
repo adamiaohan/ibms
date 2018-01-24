@@ -1,0 +1,1175 @@
+@charset "UTF-8";
+@mixin eli($a){
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;  //对象作为伸缩盒子模型显示 
+    -webkit-box-orient: vertical;  //设置或检索伸缩盒对象的子元素的排列方式 
+    -webkit-line-clamp: $a; /** 显示的行数 */
+}
+html,body{
+	height: 100%;
+	width: 100%;
+	background: #fff;
+	font-size:12px;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+#top{
+	width: 100%;
+	height: 50px;
+	background: #fff;
+	vertical-align: baseline;
+	line-height: 50px;
+	box-sizing: border-box;
+	.logo{
+		font-family:iconfont;
+		font-size: 23px;
+		float: left;
+		margin-left: 20px;
+	}
+	ul{
+		width: 50%;
+		/*margin-left: 20px;*/
+		float: left;
+		li{
+			height: 47px;
+			font-size: 15px;
+			float: left;
+			margin-left: 24px;
+			transition: 0.3s;
+			span{
+				font-family:iconfont;
+				color: #000;
+				font-weight: bold;
+				font-size: 16px;
+			}
+		}
+	}
+	.tright{
+		float: right;
+		/*width: 35%;*/
+		height: 50px;
+		line-height: 50px;
+		/*overflow: hidden;*/
+		p{
+			width: 108px;
+			height: 30px;
+			line-height: 30px;
+			margin-top: 10px;
+			text-align: center;
+			border:1px solid #4178be;
+			color: #4178be;
+			/*padding: 9.5px 1em 8.5px;*/
+			font-size: 14px;
+			float: left;
+			transition: 0.3s;
+		}
+		p:hover{
+			background: #4178be;
+			color: #fff;
+		}
+		.serout{
+			margin-left: 20px;
+			float: left;
+			height: 50px;
+			box-sizing: border-box;
+			.search{
+				float: left;
+				/*width: 220px;*/
+				height: 100%;
+				border-left: 1px solid #e0e0e0;
+				
+				/*background: red;*/
+				
+				/*padding-right: 10px;*/
+				line-height: 54px;
+				.inp{
+					width: 175px;
+					padding-left: 10px;
+					border: none;
+					outline: none;
+					/*border-left: 1px solid #e0e0e0;*/
+					/*width: 79%;*/
+					height: 85%;
+				}
+				.inp::-webkit-input-placeholder{
+					 	font-size:15px;
+				 }
+			}
+			
+			span{
+				float: right;
+				display: inline-block;
+				width: 43px;
+				height: 48px;
+				text-align: center;
+				font-family: iconfont;
+				font-size: 23px;
+				border-right: 1px solid #e0e0e0;
+			}
+		}
+		.user2{
+			font-family: iconfont;
+			font-size: 22px;
+			margin-left: 18px;
+			margin-right: 40px;
+		}
+		.user2:hover,.user1:hover{
+			color:#4178be;
+		}
+		.user1{
+			font-size: 27px;
+			font-family: iconfont;
+			font-weight: bold;
+			margin-left: 20px;
+		}
+	}
+}
+.pro{
+	width: 100%;
+	height: 0;
+	position: absolute;
+	top: 51px;
+	left: 0;
+	overflow: hidden;
+	.pleft{
+		width: 34%;
+		height: 100%;
+		background: #f4f4f4;
+		float: left;
+		ul{
+			margin-left: 86px;
+			margin-top: 18px;
+			li{
+				/*padding:13px 20px 5px;*/
+				width: 94%;
+				height: 40px;
+				line-height: 40px;
+				color: #000;
+				font-size: 16px;
+				font-weight: bold;
+				
+				a{
+					margin-left: 16px;
+					/*background: red;*/
+					font-size: 18px;
+					width: 80%;
+					color: #323232;;
+					font-weight: normal;
+					transition: 0.3s;
+				}
+				span{
+					float: right;
+					font-family: iconfont;
+					margin-right: 16px;
+					font-size: 22px;
+					color: transparent;
+					transition: 0.3s;
+				}
+			}
+		}
+	}
+	.pright{
+		width: 66%;
+		height: 100%;
+		background: #fff;
+		float: left;
+		padding-left: 20px;
+		box-sizing: border-box;
+		p{
+			font-size: 40px;
+			margin-top: 20px;
+			color: #3b6caa;
+		}
+		.inleft{
+			width: 40%;
+			height: 100%;
+			/*background: red;*/
+			margin-top: 20px;
+			float: left;
+			p{
+				font-size: 18px;
+				color: #3b6caa;
+			}
+			span{
+				font-size: 14px;
+				color: #000;
+			}
+		}
+		.inright{
+			width: 50%;
+			height: 100%;
+			/*background: red;*/
+			float: left;
+			h3{
+				width:100%;
+				height: 30px;
+				line-height: 20px;
+				font-size: 16px;
+				color: #4a4a4a;
+			}
+			img{
+				margin-top: 20px;
+			}
+			p{
+				width:90%;
+				height: 30px;
+				line-height: 20px;
+				font-size: 16px;
+				color: #3b6caa;
+			}
+		}
+	}
+}
+.banner{
+	width: 100%;
+	height: 491px;
+	background: url(../img/4.jpg) no-repeat;
+	background-size: 100% 100%;
+	color: #fff;
+	overflow: hidden;
+	img{
+		display: none;
+	}
+	.btext{
+		width: 34%;
+		height: auto;
+		padding: 20px;
+		box-sizing: border-box;
+		margin:30px 20px;
+		/*display: flex;*/
+
+		.tit{
+			width: 100%;
+			margin-bottom: 1.8rem;
+			font-size: 2.3rem;
+			font-family:'宋体';
+			font-weight:100;
+			line-height:2.25rem;
+		}
+		p{
+			width: 100%;
+			margin-bottom: 20px;
+			font-size: 0.9rem;
+			line-height: 1.2rem;
+			margin-bottom: 1.5rem;
+			transition: 0.3s;
+		}
+	}
+}
+.first{
+	width: 100%;
+	padding-top: 20px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	background: #fff;
+	overflow: hidden;
+	div{
+		width: 25%;
+		padding: 20px;
+		float: left;
+		box-sizing: border-box;
+		img{
+			width: 100%;
+			height:auto;
+			margin-bottom: 20px;
+		}
+		h3{
+			width: 100%;
+			/*font-size: 0.8rem;*/
+			font-size: 16px;
+			margin-bottom: 20px;
+			line-height: 24px;
+		}
+		p{
+			width: 100%;
+			/*font-size: 0.8rem;*/
+			font-size: 16px;
+			margin-bottom: 50px;
+			color: #333;
+		}
+		span{
+			width: 100%;
+			/*font-size: 0.8rem;*/
+			font-size: 16px;
+			margin-bottom: 20px;
+			color:#236dfc;;
+		}
+	}
+}
+.second{
+	/*clear: both;*/
+	width: 100%;
+	margin-top: 20px;
+	padding: 20px 0 30px 20px;
+	box-sizing: border-box;
+	background: #ececec;
+	overflow: hidden;
+	div{
+		width: 25%;
+		padding: 20px;
+		float: left;
+		box-sizing: border-box;
+		img{
+			width: 100%;
+			height:auto;
+			margin-bottom: 20px;
+		}
+		h3{
+			width: 100%;
+			/*font-size: 0.8rem;*/
+			font-size: 16px;
+			margin-bottom: 20px;
+			line-height: 24px;
+		}
+		p{
+			width: 100%;
+			/*font-size: 0.8rem;*/
+			font-size: 16px;
+			margin-bottom: 80px;
+			color: #333;
+		}
+		span{
+			width: 100%;
+			/*font-size: 0.8rem;*/
+			font-size: 16px;
+			margin-bottom: 40px;
+			color:#236dfc;;
+		}
+	}
+}
+.third{
+	width: 100%;
+	padding-left: 20px;
+	box-sizing: border-box;
+	overflow: hidden;
+	background: #0064ff;
+	display: flex;
+	flex-wrap: wrap;
+	div{
+		width: 25%;
+		padding: 20px;
+		float: left;
+		box-sizing: border-box;
+		background: #000;
+		color: #fff;
+		/*flex-wrap: wrap;*/
+		img{
+			width: 100%;
+			height:auto;
+			margin-bottom: 20px;
+		}
+		h3{
+			width: 100%;
+			/*font-size: 0.8rem;*/
+			font-size: 16px;
+			margin-bottom: 20px;
+			line-height: 24px;
+
+		}
+		p{
+			width: 100%;
+			/*font-size: 0.8rem;*/
+			font-size: 16px;
+			margin-bottom: 80px;
+			color: #333;
+			color: #fff;
+		}
+		span{
+			width: 100%;
+			/*font-size: 0.8rem;*/
+			font-size: 16px;
+			margin-bottom: 20px;
+			color:#236dfc;;
+			color: #fff;
+		}
+	}
+	.two:hover span{
+		color:#8ed1ff;
+	}
+	.three:hover span{
+		color:#8ed1ff;
+	}
+	.four:hover span{
+		color:#8ed1ff;
+	}
+	.one{
+		padding-top: 40px;
+		box-sizing: border-box;
+		background:#0064ff;
+	}
+}
+
+.fourth{
+	/*clear: both;*/
+	width: 100%;
+	/*margin-top: 20px;*/
+	padding: 20px 0 0 20px;
+	box-sizing: border-box;
+	background: #fff;
+	/*overflow: hidden;*/
+	display: flex;
+	flex-wrap: wrap;
+	div{
+		width: 25%;
+		padding: 20px;
+		float: left;
+		box-sizing: border-box;
+		h3{
+			width: 100%;
+			/*font-size: 0.8rem;*/
+			font-size: 16px;
+			margin-bottom: 20px;
+			line-height: 24px;
+			font-weight: 600;
+		}
+		p{
+			width: 100%;
+			font-size: 16px;
+			margin-bottom: 40px;
+			color: #333;
+		}
+		span{
+			display: block;
+			width: 100%;
+			/*font-size: 0.8rem;*/
+			font-size: 16px;
+			line-height: 26px;
+			margin-bottom: 80px;
+			color:#236dfc;;
+		}
+	}
+	.one{
+		padding-left: 10px;
+		.old{
+			width: 100%;
+			padding: 0;
+		}
+		.new{
+			width: 100%;
+			padding: 0;
+			display: none;
+			.innew{
+				width: 100%;
+				span{
+					margin-bottom: 40px;
+				}
+			}
+		}
+		.laster{
+			width: 100%;
+			padding: 0;
+			display: none;
+			.innewer{
+				width: 100%;
+				span{
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	.twleft{
+		.oldder{
+			width: 100%;
+			padding: 0;
+		}
+		.newer{
+			width: 100%;
+			padding: 0;
+			display: none;
+			.innewer{
+				width: 100%;
+				padding: 0;
+				span{
+					margin-bottom: 60px;
+				}
+			}
+		}
+		.last{
+			width: 100%;
+			padding: 0;
+			display: none;
+			.innewer{
+				width: 100%;
+				padding: 0;
+				span{
+					margin-bottom: 90px;
+				}
+			}
+		}
+	}
+}
+.fifth{
+	width: 100%;
+	padding-left: 20px;
+	box-sizing: border-box;
+	overflow: hidden;
+	background: #ececec;
+	display: flex;
+	flex-wrap: wrap;
+
+	.fiveleft,.fiveright{
+		width: 50%;
+		float: left;
+	}
+	.fiveleft{
+		padding: 40px 0;
+		flex-wrap: wrap;
+		.lright2{
+			width: 100%;
+			padding: 40px;
+			box-sizing: border-box;
+			background: url(../img/bb1.jpg) no-repeat top center/cover;
+			display: none;
+		}
+		.lright1{
+			width: 100%;
+			/*height: 26rem;*/
+			padding: 0 20px 40px 20px;
+			box-sizing: border-box;
+			display: none;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+		.lefttop{
+			padding: 20px;
+			width: 100%;
+			p{
+				font-size: 10px;
+			}
+			h3{
+				width: 80%;
+				margin-top: 20px;
+				font-size: 24px;
+			}
+		}
+		.leftmid{
+			padding: 20px 20px 6px 20px;
+			p{
+				font-family: iconfont;
+				font-size: 56px;
+				color: #3b6caa;
+				font-weight: 100;
+			}
+		}
+		.mid{
+			div{
+				padding: 20px;
+				box-sizing: border-box;
+				width: 50%;
+				float: left;
+				p{
+					font-size: 15px;
+					line-height: 20px;
+					font-weight: 100;
+				}
+			}
+		}
+		.bot{
+			clear: both;
+			padding: 20px;
+			p{
+				font-size: 16px;
+				color: #236dfc;
+				margin-bottom: 30px;
+			}
+		}
+	}
+	.fiveright{
+		background: url(../img/bb1.jpg) no-repeat top center/cover;
+		/*background-size: 100% 100%;*/
+	}
+}
+.six{
+	width: 100%;
+	background: linear-gradient(to bottom,#006eff 30%,rgba(86,82,186,.8));
+	display: flex;
+	flex-wrap: wrap;
+	color: #fff;
+	padding: 20px;
+	box-sizing: border-box;
+	.sixtop{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		.sixer{
+			width: 25%;
+			padding: 20px;
+			box-sizing: border-box;
+			h3{
+				margin-bottom: 24px;
+				font-size: 16px;
+			}
+			p{
+				font-size: 16px;
+				line-height: 25px;
+			}
+		}
+	}
+	.sixbottom{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 20px;
+		.insix{
+			width: 25%;
+			padding: 20px;
+			box-sizing: border-box;
+			h3{
+				margin-bottom: 24px;
+				font-size: 16px;
+			}
+			p{
+				font-size: 16px;
+				margin-bottom: 20px;
+				line-height: 25px;
+			}
+		}
+	}
+}
+.seventh{
+	width: 100%;
+	background: #f4f4f4;
+	/*padding: 0 80px;*/
+	box-sizing: border-box;
+	display: flex;
+	overflow: hidden;
+	.sevenson{
+		width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		div{
+			width: 25%;
+			padding: 40px 10px 10px;
+			h3{
+				margin-bottom: 24px;
+				font-size: 16px;
+			}
+			p{
+				font-size: 16px;
+				margin-bottom: 20px;
+				line-height: 20px;
+				font-weight: 400;
+				color: #333;
+			}
+			p:hover{
+				text-decoration: underline;
+				color: #3b6caa;
+			}
+		}
+	}
+	
+}
+.eight{
+	width: 100%;
+	background: #f4f4f4;
+	.ineight{
+		width: 1200px;
+		margin: 0 auto;
+		border-bottom: 1px solid #aeaeae;
+		padding: 0 10px 30px;
+		box-sizing: border-box;
+		overflow: hidden;
+		.eightright{
+			width: 25%;
+			float: right;
+			padding: 0 10px;
+			box-sizing: border-box;
+			h3{
+				font-size: 16px;
+				line-height: 30px;
+				margin-bottom: 10px;
+			}
+			select{
+				width: 98%;
+				height: 40px;
+				font-size: 16px;
+			}
+		}
+	}
+}
+footer{
+	width: 100%;
+	background: #f4f4f4;
+	overflow: hidden;
+	.foot{
+		width: 1200px;
+		margin: 0 auto;
+		padding: 0 10px;
+		box-sizing: border-box;
+		overflow: hidden;
+		ul{
+			float: left;
+			/*width: 50%;*/
+			padding: 10px 0;
+			box-sizing: border-box;
+			li{
+				float: left;
+				font-size: 15px;
+				margin-right: 20px;
+				padding: 10px 0;
+				color: #5a5a5a;
+				box-sizing: border-box;
+			}
+		}
+		.foright{
+			float: right;
+			padding: 10px 0;
+			box-sizing: border-box;
+			p{
+				float: left;
+				padding-left: 15px;
+				font-size: 15px;
+				margin-top: 10px;
+			}
+			div{
+				float: left;
+				span{
+					font-family: iconfont;
+					font-size: 24px;
+					margin-left: 10px;
+				}
+				span:nth-child(1){
+					font-size: 26px;
+				}
+			}
+		}
+	}
+}
+
+/*导航栏改变*/
+	@media screen and (max-width: 1180px){
+		.tul{
+			display: none;
+		}
+	}
+	@media screen and (max-width: 597px){
+		.search{
+			display: none;
+		}
+	}
+	@media screen and (max-width: 584px){
+		.tright p{
+			display: none;
+		}
+	}
+
+	/*屏幕改变  banner改变*/
+	@media screen and (max-width: 1055px){
+		.banner{
+			.btext{
+				width: 46%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 870px){
+		.banner{
+			.btext{
+				width: 50%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.banner{
+			background: #000;
+			height: auto;
+			img{
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+			.btext{
+				width: 88%;
+				.tit{
+					font-size: 2.8rem;
+					line-height: 3rem;
+				}
+				p{
+					font-size: 1.2rem;
+					line-height: 2rem;
+				}
+			}
+		}
+	}
+
+	/*屏幕小于1055，四个模块里面的div宽度改变，由四个变成2个*/
+	@media screen and (max-width: 1055px){
+		.first{
+			div{
+				width: 50%;
+				padding: 30px;
+				box-sizing: border-box;
+			}
+		}
+		.second{
+			div{
+				width: 50%;
+				padding: 30px;
+				box-sizing: border-box;
+			}
+		}
+		.third{
+			padding-left: 0;
+			div{
+				width: 50%;
+				padding: 30px;
+				box-sizing: border-box;
+			}
+		}
+		.fourth{
+			div{
+				width: 50%;
+				padding: 30px;
+				box-sizing: border-box;
+			}
+		}
+	}
+	@media screen and (max-width: 839px){
+		.first{
+			div{
+				padding: 26px;
+				box-sizing: border-box;
+			}
+		}
+		.second{
+			div{
+				padding: 26px;
+				box-sizing: border-box;
+			}
+		}
+		.third{
+			div{
+				padding: 26px;
+				box-sizing: border-box;
+			}
+		}
+		.fourth{
+			div{
+				padding: 26px;
+				box-sizing: border-box;
+			}
+		}
+	}
+	@media screen and (max-width: 750px){
+		.first{
+			div{
+				padding: 24px;
+				box-sizing: border-box;
+			}
+		}
+		.second{
+			div{
+				padding: 24px;
+				box-sizing: border-box;
+			}
+		}
+		.third{
+			div{
+				padding: 24px;
+				box-sizing: border-box;
+			}
+		}
+		.fourth{
+			div{
+				padding: 24px;
+				box-sizing: border-box;
+			}
+		}
+	}
+	/*当屏幕小于640时，子元素宽度变为100%*/
+	@media screen and (max-width: 640px){
+		.first{
+			div{
+				width: 100%;
+				padding: 40px;
+				box-sizing: border-box;
+			}
+		}
+		.second{
+			div{
+				width: 100%;
+				padding: 40px;
+				box-sizing: border-box;
+			}
+		}
+		.third{
+			padding-left: 0;
+			div{
+				width: 100%;
+				padding: 40px;
+				box-sizing: border-box;
+			}
+		}
+		.fourth{
+			padding-left: 0;
+			div{
+				width: 100%;
+				padding: 40px;
+				box-sizing: border-box;
+			}
+		}
+	}
+
+	/*屏幕小于1055时，fourth模块出现排版改变，通过display：none实现 */
+	@media screen and (max-width: 1055px){
+		.fourth{
+			.twleft{
+				.oldder{
+					display: none;
+				}
+				.newer{
+					display: block;
+				}
+			}
+			.two{
+				display: none;
+			}
+		}
+	}
+	@media screen and (max-width: 1000px){
+		.fourth{
+			.one{
+				.new{
+					display: block;
+					.innew{
+						padding-left: 0;
+					}
+				}
+			}
+			.twleft{
+				.newer{
+					display: none;
+				}
+				.last{
+					display: block;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 640px){
+		.fourth{
+			.one{
+				width:100%;
+				padding-left: 40px;
+				.laster{
+					display: block;
+					.innewer{
+						padding-left: 0;
+					}
+				}
+			}
+			.twleft{
+				display: none;
+			}
+		}
+
+	}
+
+	/*小于1055时，fifth里面左侧div里面的元素宽度改变*/
+	@media screen and (max-width: 1055px){
+		.fifth{
+			.fiveleft{
+				.mid{
+					div{
+						width: 100%;
+						margin-bottom: 40px;
+					}
+				}
+			}
+		}
+	}
+	/*小于640，右侧消失，左侧下面出现图片*/
+	@media screen and (max-width: 640px){
+		.fifth{
+			.fiveleft,.fiveright{
+				width: 100%;
+			}
+			.fiveleft{
+				.lright2{
+					display: block;
+				}
+			}
+		}
+	}
+	/*小于580，左侧上面出现图片*/
+	@media screen and (max-width: 580px){
+		.fifth{
+			.fiveleft{
+				.lright1{
+					display: block;
+				}
+				.lright2{
+					display: none;
+				}
+			}
+		}
+	}
+	/*小于1055时，six内部排版出现改变*/
+	@media screen and (max-width: 1055px){
+		.six{
+			.sixbottom{
+				.insix-2{
+					display: none;
+				}
+				.insix{
+					width: 33%;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 640px){
+		.six{
+			.sixtop{
+				.sixer{
+					width: 100%;
+					margin-bottom: 30px;
+				}
+			}
+			.sixbottom{
+				.insix:nth-child(1){
+					display: none;
+				}
+				.insix{
+					width: 100%;
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+	/*seventh部分的媒体查询*/
+	@media screen and (max-width: 1240px){
+		.seventh{
+			.sevenson{
+				width: 960px;
+			}
+		}
+		.eight{
+			.ineight{
+				width: 960px;
+			}
+		}
+		footer{
+			.foot{
+				width: 960px;
+			}
+		}
+	}
+	@media screen and (max-width: 1000px){
+		.seventh{
+			.sevenson{
+				width: 720px;
+			}
+		}
+		.eight{
+			.ineight{
+				width: 720px;
+				.eightright{
+					width: 50%;
+				}
+			}
+		}
+		footer{
+			.foot{
+				width: 720px;
+				.foright{
+					p{
+						float: left;
+					}
+					div{
+						float: right;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 760px){
+		.seventh{
+			.sevenson{
+				width: 540px;
+			}
+		}
+		.eight{
+			.ineight{
+				width: 540px;
+			}
+		}
+		footer{
+			.foot{
+				width: 540px;
+			}
+		}
+	}
+	@media screen and (max-width: 580px){
+		.seventh{
+			.sevenson{
+				width: 100%;
+				flex-wrap: wrap;
+				div{
+					width: 100%;
+					column-count: 2;
+				}
+			}
+		}
+		.eight{
+			.ineight{
+				width: 100%;
+				margin-left: 20px;
+				box-sizing: border-box;
+				.eightright{
+					width: 100%;
+				}
+			}
+		}
+		footer{
+			.foot{
+				width: 100%;
+				ul{
+					width: 100%;
+					/*column-count: 2;*/
+					margin-left: 20px;
+					box-sizing: border-box;
+					li{
+						width: 50%;
+					}
+				}
+				.foright{
+					width: 100%;
+					p{
+						float: left;
+					}
+					div{
+						float: left;
+					}
+				}
+			}
+		}
+	}
+
+	/*seventh部分的媒体查询*/
+/*	@media screen and (max-width: 1240px){
+		.eight{
+			.ineight{
+				width: 960px;
+			}
+		}
+	}
+	@media screen and (max-width: 1000px){
+		.seventh{
+			.sevenson{
+				width: 720px;
+			}
+		}
+	}
+*/
